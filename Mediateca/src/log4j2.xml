@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configuration SYSTEM "http://logging.apache.org/log4j/2.0/log4j2.dtd">
+
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} [%level] %logger{36} - %msg%n"/>
+        </Console>
+        <File name="fileAppender" fileName="logs/mediateca.log">
+            <PatternLayout pattern="%d{dd-MM-yyyy HH:mm:ss} [%level] %logger{36} - %msg%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="all">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="fileAppender"/>
+        </Root>
+    </Loggers>
+</Configuration>
